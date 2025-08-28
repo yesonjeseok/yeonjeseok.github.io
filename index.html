@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>연제석 | EduTech × People/HR 기획자 포트폴리오</title>
+  <meta name="description" content="EduTech 콘텐츠 기획 × People/HR 브랜딩 통합형 포트폴리오" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b0f14;--card:#0e141b;--ink:#e7eef8;--muted:#9fb0c0;--brand:#6ee7ff;--accent:#7cf7d4;--line:#1c2633;--chip:#0f1722}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:"Inter","Pretendard",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;letter-spacing:.1px}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1040px;margin:0 auto;padding:28px}
+    header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,rgba(11,15,20,.98),rgba(11,15,20,.8) 70%,transparent);backdrop-filter:blur(8px)}
+    .nav{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+    .brand{font-weight:700;font-size:18px;letter-spacing:.4px}
+    .nav a{font-size:14px;color:var(--muted)}
+    .nav a.active,.nav a:hover{color:var(--ink)}
+    .lang-toggle{margin-left:auto;display:flex;gap:8px}
+    .lang-toggle button,.chip{border:1px solid var(--line);background:var(--chip);color:var(--muted);padding:6px 10px;border-radius:999px;font-size:12px}
+    .lang-toggle button.active{color:var(--ink);border-color:var(--brand)}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:28px 0 8px}
+    .hero h1{font-size:36px;line-height:1.2;margin:0 0 10px}
+    .tag{display:inline-flex;gap:8px;align-items:center;background:var(--chip);border:1px solid var(--line);padding:8px 12px;border-radius:12px;color:var(--muted);font-size:13px}
+    .tag svg{width:16px;height:16px}
+    .kicker{color:var(--muted);margin:10px 0 18px}
+    .cta{display:flex;gap:10px}
+    .cta a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+    .grid{display:grid;gap:18px}
+    .two{grid-template-columns:1fr 1fr}
+
+    section{padding:32px 0;border-top:1px solid var(--line)}
+    section h2{font-size:20px;margin:0 0 14px}
+    .card{border:1px solid var(--line);background:var(--card);padding:18px;border-radius:14px}
+    .card h3{margin:0 0 6px;font-size:16px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
+    .list{display:grid;gap:12px}
+    .bul{margin:8px 0 0 18px}
+
+    .timeline{position:relative;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:6px;top:2px;bottom:2px;width:2px;background:var(--line)}
+    .t-item{position:relative;margin:0 0 18px 0}
+    .t-item:before{content:"";position:absolute;left:-12px;top:4px;width:10px;height:10px;background:var(--brand);border-radius:50%}
+
+    footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+
+    /* responsive */
+    @media (max-width: 840px){
+      .hero{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">연제석 · EduTech × People/HR</div>
+      <a href="#about" class="active">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#skills">Skills</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+      <div class="lang-toggle">
+        <button class="active" id="btn-ko">KR</button>
+        <button id="btn-en">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="about">
+      <div>
+        <span class="tag" id="tagline">사람과 사람을 연결하는 기획자 · EduTech → People/HR</span>
+        <h1 id="hero-title">콘텐츠 기획의 구조화와 HR 브랜딩의 스토리텔링을 연결합니다.</h1>
+        <p class="kicker" id="hero-desc">교육 콘텐츠 기획에서 쌓은 커리큘럼 설계·운영 역량을 바탕으로, 조직 문화/채용 브랜딩/온보딩 경험을 데이터로 설계합니다.</p>
+        <div class="cta">
+          <a href="#projects">포트폴리오 보기</a>
+          <a href="mailto:hello@example.com">이메일 보내기</a>
+          <a href="https://github.com/yeonjeseok" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>핵심 역량</h3>
+        <ul class="bul">
+          <li>기획 구조화: TAC/MPC/PMC/PAC 설계, 요구사항 정의서 표준화</li>
+          <li>People/HR: 채용 브랜딩 템플릿, 온보딩/컬처 프로그램 기획</li>
+          <li>데이터: 참여율/전환율 대시보드, 실험 설계 & 리포팅</li>
+          <li>협업: 문서화·이슈 트래킹·프로세스 운영(Asana/Jira/GitHub)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>EduTech 콘텐츠 기획자</h3>
+          <div class="meta">Class101 / BlueTiger 등 · 20XX–20XX</div>
+          <ul class="bul">
+            <li>언리얼/유니티/3D 카테고리 커리큘럼 로드맵 설계 및 운영</li>
+            <li>멘토 등급제(A/B)와 평가 루브릭 고도화 → 참여율 +XX%</li>
+            <li>B2B(대학/기업) 맞춤형 운영 가이드 & KPI 리포트 체계화</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>People/HR 기획 (브랜딩/온보딩)</h3>
+          <div class="meta">프로젝트 기반 · 20XX–현재</div>
+          <ul class="bul">
+            <li>채용 브랜딩 콘텐츠 템플릿(인터뷰/아티클/슬라이드) 운영</li>
+            <li>온보딩 30·60·90 플랜과 문화캠프 제안 · 만족도/잉게이지 지표 설계</li>
+            <li>지원자 경험(Journey) 개선 플로우 · FAQ/자동응답 매뉴얼</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Portfolio</h2>
+      <div class="grid two list">
+        <article class="card">
+          <h3>EduTech | 커리큘럼 로드맵 & 운영 가이드</h3>
+          <p class="meta">문제→접근→해결→성과</p>
+          <ul class="bul">
+            <li>문제: 수요 대비 이수율/멘토 참여 편차</li>
+            <li>접근: 단계형 로드맵(TAC→MPC→PMC→PAC) + 멘토 등급제</li>
+            <li>해결: 루브릭/과제/피드백 표준화, 운영 대시보드</li>
+            <li>성과: 완주율 +XX%, NPS +X.X</li>
+          </ul>
+          <p><a href="https://github.com/yeonjeseok/edutech-project" target="_blank" rel="noreferrer">레포지토리 보기</a></p>
+        </article>
+        <article class="card">
+          <h3>HR | 채용 브랜딩 템플릿 시스템</h3>
+          <p class="meta">포맷 통합·배포 자동화</p>
+          <ul class="bul">
+            <li>아티클/인터뷰/슬라이드/영상 큐시트 통합 템플릿</li>
+            <li>콘텐츠 제작 → 검토 → 배포 워크플로우 표준화</li>
+            <li>채널별 KPI(조회/체류/지원 전환) 측정 대시보드</li>
+          </ul>
+          <p><a href="https://github.com/yeonjeseok/hr-branding" target="_blank" rel="noreferrer">레포지토리 보기</a></p>
+        </article>
+        <article class="card">
+          <h3>Data | 참여율·전환율 분석 미니 대시보드</h3>
+          <p class="meta">CSV/Notebook 포함</p>
+          <ul class="bul">
+            <li>멘토 참여율 분포, 세션별 이탈 분석</li>
+            <li>PV→지원 전환 퍼널 · 실험/캠페인 AB 결과</li>
+          </ul>
+          <p><a href="https://github.com/yeonjeseok/data-dashboard" target="_blank" rel="noreferrer">레포지토리 보기</a></p>
+        </article>
+        <article class="card">
+          <h3>Ops | LMS 요구사항 정의서</h3>
+          <p class="meta">운영 프로세스/권한/로그/보고</p>
+          <p><a href="https://github.com/yeonjeseok/lms-spec" target="_blank" rel="noreferrer">레포지토리 보기</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="chip">Curriculum Design</span>
+        <span class="chip">People/HR Branding</span>
+        <span class="chip">Onboarding</span>
+        <span class="chip">Content Ops</span>
+        <span class="chip">SQL/Excel</span>
+        <span class="chip">Python basics</span>
+        <span class="chip">Notion/Jira/Asana</span>
+        <span class="chip">GitHub · Issues</span>
+        <span class="chip">Storytelling</span>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <h2>Timeline (전환 스토리)</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h3>EduTech 콘텐츠 기획자 → 운영 체계화</h3>
+          <div class="meta">카테고리 확장, 멘토 제도/루브릭 구축</div>
+        </div>
+        <div class="t-item">
+          <h3>데이터 기반 운영 → HR 브랜딩 접점 생성</h3>
+          <div class="meta">채용 콘텐츠 템플릿, 후보자 여정 지도</div>
+        </div>
+        <div class="t-item">
+          <h3>People/HR 기획 확장</h3>
+          <div class="meta">온보딩/문화 캠프 제안 및 파일럿</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid two">
+        <div class="card">
+          <h3>연락처</h3>
+          <p class="meta">서울 · 아시아/서울(UTC+9)</p>
+          <p><a href="mailto:hello@example.com">hello@example.com</a> · <a href="https://github.com/yeonjeseok" target="_blank" rel="noreferrer">github.com/yeonjeseok</a></p>
+        </div>
+        <div class="card">
+          <h3>다운로드</h3>
+          <p><a href="#">이력서(PDF)</a> · <a href="#">경력기술서(PDF)</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        © <span id="year"></span> Yeon Jeseok. Built on GitHub Pages. Theme by me.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // smooth active link
+    const navLinks=[...document.querySelectorAll('.nav a[href^="#"]')];
+    const sections=navLinks.map(a=>document.querySelector(a.getAttribute('href')));
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){
+        navLinks.forEach(a=>a.classList.remove('active'));
+        const id="#"+e.target.id; const found=navLinks.find(a=>a.getAttribute('href')===id); if(found) found.classList.add('active');
+      }})
+    },{rootMargin:"-40% 0px -55% 0px",threshold:0});
+    sections.forEach(s=>io.observe(s));
+
+    // language toggle (KR/EN demo)
+    const ko={
+      tagline:"사람과 사람을 연결하는 기획자 · EduTech → People/HR",
+      title:"콘텐츠 기획의 구조화와 HR 브랜딩의 스토리텔링을 연결합니다.",
+      desc:"교육 콘텐츠 기획에서 쌓은 커리큘럼 설계·운영 역량을 바탕으로, 조직 문화/채용 브랜딩/온보딩 경험을 데이터로 설계합니다.",
+    };
+    const en={
+      tagline:"Planner connecting people · EduTech → People/HR",
+      title:"I connect structured content design with HR branding storytelling.",
+      desc:"Leveraging curriculum design & operations, I design onboarding/culture and hiring-brand experiences with data.",
+    };
+    const btnKo=document.getElementById('btn-ko');
+    const btnEn=document.getElementById('btn-en');
+    const tgl=(lang)=>{
+      const d=lang==='ko'?ko:en;
+      document.getElementById('tagline').textContent=d.tagline;
+      document.getElementById('hero-title').textContent=d.title;
+      document.getElementById('hero-desc').textContent=d.desc;
+      btnKo.classList.toggle('active',lang==='ko');
+      btnEn.classList.toggle('active',lang==='en');
+    };
+    btnKo.addEventListener('click',()=>tgl('ko')); btnEn.addEventListener('click',()=>tgl('en'));
+
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
